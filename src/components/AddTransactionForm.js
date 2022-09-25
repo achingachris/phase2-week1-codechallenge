@@ -53,6 +53,7 @@ function AddTransactionForm() {
             name='date'
             value={date}
             onChange={handleDateChange}
+            required
           />
           <input
             type='text'
@@ -60,6 +61,7 @@ function AddTransactionForm() {
             placeholder='Description'
             value={description}
             onChange={handleDescriptionChange}
+            required
           />
           <input
             type='text'
@@ -67,6 +69,7 @@ function AddTransactionForm() {
             placeholder='Category'
             value={category}
             onChange={handleCategoryChange}
+            required
           />
           <input
             type='number'
@@ -74,6 +77,7 @@ function AddTransactionForm() {
             placeholder='Amount'
             step='0.01'
             onChange={handleAmountChange}
+            required
           />
         </div>
         <button className='ui button' type='submit'>
