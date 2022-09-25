@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Transaction from './Transaction'
 
-function TransactionsList() {
+function TransactionsList({ data, transaction }) {
   const [transactions, setTransactions] = useState([])
 
   // get transations from API
@@ -30,16 +30,8 @@ function TransactionsList() {
             <h3 className='ui center aligned header'>Amount</h3>
           </th>
         </tr>
-        {/* render a list of <Transaction> components here */}
-        {/* {peopleInSpace.map((person) => person.name)} */}
         {transactions.map((data) => (
-          <Transaction
-            key={data.id}
-            date={data.date}
-            description={data.description}
-            category={data.category}
-            amount={data.amount}
-          />
+          <Transaction key={data.id} transaction={data} />
         ))}
       </tbody>
     </table>
