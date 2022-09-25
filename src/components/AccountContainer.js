@@ -18,14 +18,25 @@ function AccountContainer() {
 
   const searchFilteredItems = (e) => {
     setSearchItem(e.target.value)
-    console.log(searchItem)
+    // console.log(searchItem)
   }
+
+  // console.log(typeof transactions)
+
+  const displaySearchItems = transactions.filter((transaction) =>
+    transaction.description.toLowerCase().includes(searchItem.toLowerCase())
+  )
+
+  console.log(displaySearchItems)
+  // const displaySearchItems = transactions.filter((item) => {
+  //   return item.name.includes(searchItem)
+  // })
 
   return (
     <div>
-      <Search searchValue={searchItem} onSearchChange={searchFilteredItems} />
+      <Search search={searchItem} onSearchChange={searchFilteredItems} />
       <AddTransactionForm />
-      <TransactionsList transaction={transactions} />
+      <TransactionsList transaction={displaySearchItems} />
     </div>
   )
 }
