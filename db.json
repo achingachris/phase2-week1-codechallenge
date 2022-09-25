@@ -83,6 +83,41 @@
       "description": "Venmo, Pay Roommate for Rent",
       "category": "Housing",
       "amount": -975
+    },
+    {
+      "id": "138cc6b6-d617-4983-be6f-11e579d88ead",
+      "date": "2022-09-27",
+      "description": "Test Description",
+      "category": "accessories",
+      "amount": "1000"
+    },
+    {
+      "id": "99b1c0a7-b57a-44b8-9da9-1d4ebec69692",
+      "date": "",
+      "description": "Test Description",
+      "category": "accessories",
+      "amount": "4"
+    },
+    {
+      "id": "1a34d87e-c281-46ab-9028-2599ce6cfff3",
+      "date": "",
+      "description": "Test Description",
+      "category": "accessories",
+      "amount": "445"
+    },
+    {
+      "id": "f2ce19b4-2e4c-4af7-9535-a0aa1f093066",
+      "date": "2022-09-15",
+      "description": "Test Description",
+      "category": "accessories",
+      "amount": "445"
+    },
+    {
+      "id": "a4180d6e-5ee8-45c3-b643-34f96bc40642",
+      "date": "2022-09-15",
+      "description": "A Car",
+      "category": "accessories",
+      "amount": "4444"
     }
   ]
 }
