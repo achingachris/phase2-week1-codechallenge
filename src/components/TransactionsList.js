@@ -1,18 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Transaction from './Transaction'
 
-function TransactionsList({ data, transaction }) {
-  const [transactions, setTransactions] = useState([])
-
-  // get transations from API
-  useEffect(() => {
-    fetch('http://localhost:8001/transactions')
-      .then((response) => response.json())
-      .then((data) => {
-        setTransactions(data)
-      })
-  }, [])
-
+function TransactionsList({ transaction }) {
   return (
     <table className='ui celled striped padded table'>
       <tbody>
@@ -30,7 +19,7 @@ function TransactionsList({ data, transaction }) {
             <h3 className='ui center aligned header'>Amount</h3>
           </th>
         </tr>
-        {transactions.map((data) => (
+        {transaction.map((data) => (
           <Transaction key={data.id} transaction={data} />
         ))}
       </tbody>
